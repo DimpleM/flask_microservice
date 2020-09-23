@@ -1,0 +1,31 @@
+CREATE DATABASE exams;
+use exams;
+
+CREATE TABLE ExamDetails (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE ExamCategoryDetails (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+exam_id INT(6)
+);
+
+CREATE TABLE SubjectDetails (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+exam_category_id INT(6)
+);
+
+CREATE TABLE TopicDetails (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+sub_id INT(6)
+);
+
+
+INSERT INTO ExamDetails
+  (name)
+VALUES
+  ('GATE');

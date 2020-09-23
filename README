@@ -1,0 +1,21 @@
+RUN docker-compose up
+
+
+###REST APIS
+
+GET /exams    # to get list of exams
+
+POST /exams   # to create  exam
+{
+    "exam": required
+}
+
+GET /subCategory   # to get  hierarchy of exam
+
+POST /subCategory  # to create  hierarchy of exam
+{
+    "exam": required,
+    "subcategory": required,
+    "subject": optional,
+    "topic": optional
+}
